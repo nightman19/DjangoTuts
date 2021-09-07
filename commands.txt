@@ -1,0 +1,20 @@
+pip install mysqlclient
+
+python manage.py startapp blog
+python manage.py migrate
+python manage.py runserver 
+python manage.py showmigrations
+python manage.py makemigrations
+python manage.py sqlmigrate blog 0001
+python manage.py createsuperuser
+pytohn manage.py shell
+
+//Mysql commmands
+CREATE USER 'djangouser'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
+CREATE USER 'perceiveghuser'@'%' IDENTIFIED WITH mysql_native_password BY 'Per@U123!';
+create user 'perceiveghuser'@localhost identified by 'Per@U123!';
+GRANT ALL ON blog_data.* TO 'djangouser'@'%';
+GRANT ALL ON db_perceivegh* TO 'perceiveghuser'@'%';
+GRANT ALL ON db_perceivegh.* TO 'perceiveghuser'@'localhost';
+db_perceivegh
+drop user 'perceiveghuser'@'localhost';
