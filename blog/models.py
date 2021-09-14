@@ -7,8 +7,9 @@ from django.urls import reverse
 
 
 class PublishedManager(models.Manager):
+    # use_in_migrations = True
     def get_queryset(self):
-        return super().get_queryset().filter(status='published')
+        return super().get_queryset().filter(author='published')
 
 
 class Post(models.Model):
