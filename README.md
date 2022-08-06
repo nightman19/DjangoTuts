@@ -1,2 +1,2 @@
 # DjangoTuts
-Django Tutorials
+Learning python django framewrok by practising
